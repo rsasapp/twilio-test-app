@@ -1,0 +1,26 @@
+group 'com.rs.testtwilio'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.0.5'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile group: "com.twilio.sdk", name: "twilio", version: "7.17.+"
+    compile group: "com.sparkjava", name: "spark-core", version: "2.7.1"
+    compile group: "org.slf4j", name: "slf4j-simple", version: "1.7.21"
+}
